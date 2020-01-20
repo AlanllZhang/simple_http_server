@@ -198,7 +198,7 @@ class SimpleHTTPRequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         length = f.tell()
         f.seek(0)
         self.send_response(200)
-        self.send_header("Content-type", "text/html")
+        self.send_header("Content-type", "text/html;charset=utf-8")
         self.send_header("Content-Length", str(length))
         self.end_headers()
         return f
